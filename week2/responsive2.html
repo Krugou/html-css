@@ -1,23 +1,76 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body {
-  background-color: lightgreen;
-}
+<html >
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Responsive</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-color: lightgreen;
+        margin: 1rem;
+        padding:1rem;
+      }
+      html {
+        font-family: Arial, Helvetica, sans-serif;
+        background: url('https://www.w3schools.com/w3images/forestbridge.jpg')
+          no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+      @media only screen and (orientation: landscape) {
+        body {
+          background-color: lightblue;
+        }
+      }
+      @media only screen and (max-width: 400px) {
+        #tausta {
+          background-image: url("dalmamini.jpg");
+          background-attachment: scroll;
+        }
+      }
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+      h2 {
+        /* font-size: 50px; */
+        /* text-align: center; */
+        /* margin: auto; */
+        /* position: fixed; */
+        /* left: 50%; */
+        /* top: 50%; */
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        /* align-content: center; */
+        flex-wrap: nowrap;
+        flex-direction: row;
+      }
+      #tausta {
+        width: 100%;
+        height: 400px;
+        background-color: greenyellow;
+        margin-bottom: 40px;
+        background-image: url('dalma.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed; /* background-image : repeating-linear-gradient(45deg, #fff, #fff 10px, #000 10px, #000 20px); */
+      }
+    </style>
+  </head>
+  <body>
+    <img src="lusina.jpg" alt="" />
 
-@media only screen and (orientation: landscape) {
-  body {
-    background-color: lightblue;
-  }
-}
-</style>
-</head>
-<body>
-  <img src="" alt="">
-
-<p>Resize the browser window. When the width of this document is larger than the height, the background color is "lightblue", otherwise it is "lightgreen".</p>
-
-</body>
+    <p>
+      Resize the browser window. When the width of this document is larger than
+      the height, the background color is "lightblue", otherwise it is
+      "lightgreen".
+    </p>
+    <div id="tausta"><h2>12345678910</h2></div>
+  </body>
 </html>
