@@ -44,20 +44,26 @@
         flex-basis: 300px;
         background-color: red;
         /* width: 300px; */
+        flex-shrink: 1;
+        order: 2;
       }
       #green {
         background-color: green;
         flex: 1;
         /* font-size: 25px; */
+        order: 1;
       }
       #blue {
         background-color: blue;
         flex: 1;
+        order: 3;
+        align-self: flex-end;
       }
       #yellow {
         background-color: yellow;
         color: black;
         /* width: 300px; */
+        order: 5;
         flex: 1;
       }
       #orange {
@@ -85,18 +91,18 @@
       main {
         display:flex;
         height:100vh;
-        flex-direction: column;
+        flex-direction: row;
         /* justify-content: center; */
         background-color: beige;
         /* gap: 30px; */
-        /* align-items: stretch; */
+        align-items: center;
       }
        .box {
         height: 100px;
         /* width: 100px; */
         border: 1px solid black;
         color: aliceblue;
-        flex: 1;
+        /* flex: 1; */
       }
     </style>
   </head>
