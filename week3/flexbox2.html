@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Positioning Items</title>
+    <meta charset="UTF-8" />
+    <style>
+      /*////////////////////
+        // Positioning items    
+        //////////////////////
+        
+        Reset *
+        Display: inline vs block
+        https://www.w3schools.com/cssref/pr_class_display.asp
+    
+        Box-sizing
+        https://www.w3schools.com/css/css3_box-sizing.asp
+        
+        Using percentages and max-width
+        https://www.w3schools.com/cssref/css_units.asp
+    
+        Float and clear
+        https://www.w3schools.com/cssref/pr_class_float.asp
+        
+        Flexbox - https://www.w3schools.com/css/css3_flexbox.asp
+        
+        Absolute/Relative positioning
+        https://www.w3schools.com/cssref/pr_class_position.asp
+          
+        Centering
+        https://www.w3schools.com/css/css_align.asp
+        
+        */
+
+      * {
+      }
+
+      body {
+        margin:0;
+      }
+
+     
+
+      #red {
+        flex: 1;
+        background-color: red;
+ 
+      }
+      #green {
+        background-color: green;
+        flex: 1;
+     
+      }
+
+      .clear {
+        clear: both;
+      }
+
+      /* img */
+      img {
+      }
+
+      /* container */
+      .container {
+      }
+
+      /* relative and absolute positioning with blue */
+      #blue {
+      }
+      * {
+    box-sizing: border-box;  
+    }
+      main {
+        display:flex;
+        height:100vh;
+        background-color: beige;
+      }
+
+       .box {
+        height: 100px;
+        /* width: 100px; */
+        border: 1px solid black;
+        color: aliceblue;
+        
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <div class="box" id="red">Box 1</div>
+      <div class="box" id="green">Box 2</div>
+    </main>
+    <h1>Otsikko</h1>
+    
+  </body>
+</html>
