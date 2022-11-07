@@ -3,6 +3,7 @@
   <head>
     <title>Positioning Items</title>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
     <style>
       /*////////////////////
         // Positioning items    
@@ -103,8 +104,14 @@
       }
       @media screen and (max-width: 600px) {
         main {
-        display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
+        /* flex-direction: column-reverse; */
+        }
+        #red {
+          order:2
+        }
+        #green {
+          order:1
         }
         
       }
