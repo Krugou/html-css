@@ -35,20 +35,21 @@
       }
 
       body {
-        margin:0;
+        margin: 0;
       }
-
-     
 
       #red {
         flex: 1;
         background-color: red;
- 
+       display: flex;
+        
+        justify-content: center;
+        align-items: center;
       }
       #green {
+        flex-direction: column;
         background-color: green;
         flex: 1;
-     
       }
 
       .clear {
@@ -67,30 +68,60 @@
       #blue {
       }
       * {
-    box-sizing: border-box;  
-    }
+        box-sizing: border-box;
+      }
       main {
-        display:flex;
-        height:100vh;
+        display: flex;
+        flex-direction: row;
+        
         background-color: beige;
       }
 
-       .box {
-        height: 100px;
-        /* width: 100px; */
+      .box {
+        
         border: 1px solid black;
         color: aliceblue;
         
       }
+     
+      
+      .card {
+        width: 150px;
+        height: 200px;
+        background-color: aliceblue;
+      }
+      .aaa {
+        flex:1;
+        background-color: red;
+      }
+      .bbb {
+        flex:2;
+        background-color: rgb(28, 224, 28);
+      }
+      #green > * {
+        
+      }
+      @media screen and (max-width: 600px) {
+        main {
+        display: flex;
+        flex-direction: column-reverse;
+        }
+        
+      }
+        
+      
     </style>
   </head>
 
   <body>
     <main>
-      <div class="box" id="red">Box 1</div>
-      <div class="box" id="green">Box 2</div>
+      <div class="box" id="red"><div class="card">KORTTI</div></div>
+
+      <div class="box" id="green">
+        <div class="aaa">A</div>
+        <div class="bbb">B</div>
+      </div>
     </main>
     <h1>Otsikko</h1>
-    
   </body>
 </html>
