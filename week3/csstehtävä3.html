@@ -10,12 +10,15 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <script src="https://kit.fontawesome.com/4e45ac471b.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/4e45ac471b.js"
+      crossorigin="anonymous"
+    ></script>
     <style>
-        @font-face {
-            font-family: myfont;
-            src: url(fonts/Lato/Lato-Black.ttf);
-        }
+      @font-face {
+        font-family: myfont;
+        src: url(fonts/Lato/Lato-Black.ttf);
+      }
       * {
         box-sizing: border-box;
       }
@@ -41,19 +44,28 @@
       p {
         font-family: myfont, serif;
         line-height: 1.5;
-
       }
-      .fontti{
-        font-size:1em;
-        margin:2em;
+      .fontti {
+        font-size: 1em;
+        margin: 2em;
+      }
+      .fa-crown {
+        font-size:1rem;
+
+        transition: font-size 2s , transform 5s;
+      }
+      .fa-crown:hover {
+        font-size:2rem;
+        transform: rotate(360deg);
+
       }
     </style>
   </head>
 
   <body>
     <h1>Tämä on otsikko</h1>
-    
-    <p><i class="fa-solid fa-crown"></i>
+    <i class="fa-solid fa-crown"></i>
+    <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi
       laudantium fuga soluta accusantium labore consequatur unde? Illo
       cupiditate quam ab, reiciendis, voluptatibus vitae error a voluptates
@@ -72,7 +84,7 @@
       recusandae nostrum fugit pariatur eligendi amet aperiam, non, distinctio
       hic?
     </p>
-        <p class="fontti">
+    <p class="fontti">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi
       laudantium fuga soluta accusantium labore consequatur unde? Illo
       cupiditate quam ab, reiciendis, voluptatibus vitae error a voluptates
