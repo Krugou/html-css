@@ -44,12 +44,19 @@
         margin: auto;
         padding: 0.625rem;
         background-color: silver;
-        height: 90vh;
+        
       }
 
       p {
         font-family: myfont, serif;
-        line-height: 1.5;
+        line-height: 1.5em;
+        font-size:0.9rem;
+      }
+      h1 {
+        font-family: myfont, serif;
+        font-size: 1.5rem;
+        font-weight: 900;
+        
       }
       .fontti {
         font-size: 1em;
@@ -121,13 +128,16 @@
       aside {
         flex:1;
         padding: 0.625rem;
+        background-color: azure;
         
       }
       footer {
-        background: rgb(40, 202, 0);
+        background: rgb(150, 150, 229);
         display: flex;
+        flex-direction:column;
+        align-items: center;
         justify-content: center;
-        height:10vh;
+        
       }
       header {
         display: flex;
@@ -137,14 +147,16 @@
       }
       figure {
         margin: 0;
-        margin-left: 20px;
+        margin-left: 1.2rem;
       }
       article > section {
         display: flex;
         flex: 3;
         flex-direction: column;
       }
-     
+     section > div {
+      padding:0.625rem;
+     }
     </style>
   </head>
 
@@ -167,8 +179,27 @@
       <article>
         <aside>
           <h2>REcent posts</h2>
-          <p>cat post one</p>
-          <p>cat post two</p>
+          <p><script>
+          document.write(new Date((new Date()).valueOf() - 1000*60*60*24).getDate());
+        </script></p>
+          <p><script>
+          document.write(new Date((new Date()).valueOf() + 1000*60*60*24).getDate());
+        </script></p>
+        <p><script>
+          document.write(new Date((new Date()).valueOf() + 1000*60*60*24 * 2).getDate());
+        </script></p>
+        <p><script>
+          document.write(new Date((new Date()).valueOf() + 1000*60*60*24 * 3).getDate());
+        </script></p>
+        <p><script>
+          document.write(new Date((new Date()).valueOf() + 1000*60*60*24 * 4).getDate());
+        </script></p>
+        <p><script>
+          document.write(new Date((new Date()).valueOf() + 1000*60*60*24 * 5).getDate());
+        </script></p>
+        <p><script>
+          document.write(new Date((new Date()).valueOf() + 1000*60*60*24 * 6).getDate());
+        </script></p>
         </aside>
         <section>
           <figure class="kuvio" ></figure>
@@ -182,7 +213,13 @@
       </article>
 
       <!-- alatunniste-->
-      <footer><p>fLeXBoX laYoUt eXample</p></footer>
+      <footer><p>fLeXBoX laYoUt eXample</p><h4>
+        Aleksi Nokelainen lentokonekuva (copyright ©
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        )
+      </h4></footer>
     </main>
   </body>
 </html>
