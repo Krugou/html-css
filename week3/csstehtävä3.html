@@ -32,15 +32,12 @@
       }
 
       main {
+        width: 80vw;
+        margin: auto;
+        background-color: silver;
+        height:90vh;
       }
-      header {
-      }
-      nav {
-      }
-      article {
-      }
-      footer {
-      }
+    
       p {
         font-family: myfont, serif;
         line-height: 1.5;
@@ -49,90 +46,88 @@
         font-size: 1em;
         margin: 2em;
       }
-      .fa-crown {
-        font-size:1rem;
+   
+      .kuvio {
+        clip-path: polygon(
+          100% 0,
+          100% 50%,
+          100% 100%,
+          0% 100%,
+          38% 50%,
+          0% 0%
+        );
+        shape-outside: polygon(
+          100% 0,
+          100% 50%,
+          100% 100%,
+          0% 100%,
+          38% 50%,
+          0% 0%
+        );
+      }
+      nav ul{
+        display:flex;
+        flex-direction: row;
 
-        transition: font-size 2s , transform 5s;
       }
-      .fa-crown:hover {
-        font-size:2rem;
-        transform: rotate(360deg);
+      nav a {
+        padding:10px;
+        display:inline-block;
+        text-decoration: none;
+      }
+     
+     
+      article{
+        display:flex;
+        flex-direction: row;
+        
+        align-items: center;
+        text-align: center;
+      }
+      aside{
+        display:flex;
+        flex-direction: column;
+      }
+       footer{
+        display:flex;
+        flex-direction: row;
+
+        align-items: center;
+        text-align: center;
 
       }
-      .kuvio{
-        clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 38% 50%, 0% 0%);
-        shape-outside: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 38% 50%, 0% 0%);
+      header{
+        display:flex;
+        justify-content: space-between;
+        border-bottom: solid black;
       }
-      .csskuvio {
-        box-sizing: content-box;
-        width: 0;
-        height: 0;
-        background-color: aqua;
-        border-top: 50px solid red;
-        border-right: 50px solid yellow;
-        border-left: 50px solid rgb(0, 255, 106);
-        border-bottom: 50px solid rgb(10, 18, 134);
-       
-  
-      }
-
     </style>
   </head>
 
   <body>
-    <h1>Tämä on otsikko</h1>
-    <i class="fa-solid fa-crown"></i>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi
-      laudantium fuga soluta accusantium labore consequatur unde? Illo
-      cupiditate quam ab, reiciendis, voluptatibus vitae error a voluptates
-      maxime fugiat alias. Exercitationem excepturi reprehenderit qui voluptatem
-      consequuntur quam aut iste, nisi temporibus voluptate maxime non at ea
-      molestiae autem nam adipisci. Expedita molestias consequuntur sed sequi
-      earum voluptates minima possimus atque! Quibusdam in accusamus autem iure
-      tempora ab aspernatur ea aliquam nemo? Praesentium tenetur, consectetur
-      ipsum quo quos voluptate laboriosam laborum earum delectus quibusdam eius
-      non. Molestiae corporis neque ea debitis! Error in porro delectus
-      voluptatum. Inventore vitae aliquam dolorum blanditiis vel unde, suscipit
-      facere animi. Cumque soluta architecto dolores nisi quibusdam sint! Sint,
-      tempore dolore sapiente recusandae dolorem labore perferendis! Nam
-      expedita aut autem dignissimos non nesciunt animi maiores labore alias!
-      Possimus voluptas commodi doloremque libero iste. Ipsam libero aspernatur
-      recusandae nostrum fugit pariatur eligendi amet aperiam, non, distinctio
-      hic?
-    </p>
-    <div class="csskuvio"></div>
-    <p class="fontti">
-      <img src="https://place-puppy.com/300x300" alt="placeholder" class="kuvio" />
 
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nisi
-      laudantium fuga soluta accusantium labore consequatur unde? Illo
-      cupiditate quam ab, reiciendis, voluptatibus vitae error a voluptates
-      maxime fugiat alias. Exercitationem excepturi reprehenderit qui voluptatem
-      consequuntur quam aut iste, nisi temporibus voluptate maxime non at ea
-      molestiae autem nam adipisci. Expedita molestias consequuntur sed sequi
-      earum voluptates minima possimus atque! Quibusdam in accusamus autem iure
-      tempora ab aspernatur ea aliquam nemo? Praesentium tenetur, consectetur
-      ipsum quo quos voluptate laboriosam laborum earum delectus quibusdam eius
-      non. Molestiae corporis neque ea debitis! Error in porro delectus
-      voluptatum. Inventore vitae aliquam dolorum blanditiis vel unde, suscipit
-      facere animi. Cumque soluta architecto dolores nisi quibusdam sint! Sint,
-      tempore dolore sapiente recusandae dolorem labore perferendis! Nam
-      expedita aut autem dignissimos non nesciunt animi maiores labore alias!
-      Possimus voluptas commodi doloremque libero iste. Ipsam libero aspernatur
-      recusandae nostrum fugit pariatur eligendi amet aperiam, non, distinctio
-      hic?
-    </p>
     <!-- koko sivu -->
     <main>
       <!-- header osio -->
-      <header></header>
+      <header>
+        <nav>
+        <ul>
+          <li><a href="#">Eka</a></li>
+          <li><a href="#">Toka</a></li>
+          <li><a href="#">Kolmas</a></li>
+        </ul>
+        </nav>
+        <button onclick="history.back()">login</button>
+      </header>
 
       <!-- sisältö jossa linkkilista ja kuva -->
-      <article></article>
+      <article>
+        <aside><h2>REcent posts</h2><p>cat post one</p><p>cat post two</p></aside><section> <img src="catwithglasses" class="kuvio" alt="catwithglasses"> 
+        </section>
+      </article>
 
       <!-- alatunniste-->
-      <footer></footer>
+      <footer>fLeXBoX laYoUt eXample</footer>
     </main>
   </body>
 </html>
