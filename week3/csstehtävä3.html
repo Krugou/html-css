@@ -29,15 +29,24 @@
         /* font-weight: 100; */
         /* font-size: 23px; */
         /* line-height: inherit; */
+        background: url(images/ocd.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+      body {
+        background: transparent;
       }
 
       main {
-        width: 80vw;
+        max-width: 80vw;
         margin: auto;
+        padding: 0.625rem;
         background-color: silver;
-        height:90vh;
+        height: 90vh;
       }
-    
+
       p {
         font-family: myfont, serif;
         line-height: 1.5;
@@ -46,8 +55,35 @@
         font-size: 1em;
         margin: 2em;
       }
-   
+      header button:hover {
+        cursor: pointer;
+
+        animation: roll 3s 3;
+        background-color: #d1db12;
+        opacity: 0.7;
+      }
+      @keyframes roll {
+        0% {
+          transform: rotate(0);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      nav a {
+        transition: background-color 1s;
+        border-radius: 0.625rem;
+      }
+      nav a:hover {
+        background-color: #726e75;
+      }
       .kuvio {
+        background: url(images/airshowredbull-0193.jpg) 50% 85%;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        flex-basis: 300px;
         clip-path: polygon(
           100% 0,
           100% 50%,
@@ -65,69 +101,88 @@
           0% 0%
         );
       }
-      nav ul{
-        display:flex;
-        flex-direction: row;
-
+      nav ul {
+        display: flex;
+        list-style: none;
+        padding-left: 0;
+        gap: 0.625rem;
+        align-items: center;
       }
       nav a {
-        padding:10px;
-        display:inline-block;
+        padding: 0.625rem;
+        display: inline-block;
         text-decoration: none;
       }
-     
-     
-      article{
-        display:flex;
+
+      article {
+        display: flex;
         flex-direction: row;
+      }
+      aside {
+        flex:1;
+        padding: 0.625rem;
         
-        align-items: center;
-        text-align: center;
       }
-      aside{
-        display:flex;
-        flex-direction: column;
+      footer {
+        background: rgb(40, 202, 0);
+        display: flex;
+        justify-content: center;
+        height:10vh;
       }
-       footer{
-        display:flex;
-        flex-direction: row;
-
-        align-items: center;
-        text-align: center;
-
-      }
-      header{
-        display:flex;
+      header {
+        display: flex;
         justify-content: space-between;
+        align-items: center;
         border-bottom: solid black;
       }
+      figure {
+        margin: 0;
+        margin-left: 20px;
+      }
+      article > section {
+        display: flex;
+        flex: 3;
+        flex-direction: column;
+      }
+     
     </style>
   </head>
 
   <body>
-
     <!-- koko sivu -->
     <main>
       <!-- header osio -->
       <header>
         <nav>
-        <ul>
-          <li><a href="#">Eka</a></li>
-          <li><a href="#">Toka</a></li>
-          <li><a href="#">Kolmas</a></li>
-        </ul>
+          <ul>
+            <li><a href="#">Eka</a></li>
+            <li><a href="#">Toka</a></li>
+            <li><a href="#">Kolmas</a></li>
+          </ul>
         </nav>
         <button onclick="history.back()">login</button>
       </header>
 
       <!-- sisältö jossa linkkilista ja kuva -->
       <article>
-        <aside><h2>REcent posts</h2><p>cat post one</p><p>cat post two</p></aside><section> <img src="catwithglasses" class="kuvio" alt="catwithglasses"> 
+        <aside>
+          <h2>REcent posts</h2>
+          <p>cat post one</p>
+          <p>cat post two</p>
+        </aside>
+        <section>
+          <figure class="kuvio" ></figure>
+          <div> <h1>flexbox testing</h1>
+          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure sit officiis minus! Aliquid suscipit dolor nam corporis, vero soluta ea voluptas neque reprehenderit quia nemo sunt maiores facere tempore iure.
+          Ex corporis nesciunt vel. Iure delectus ratione unde! Quos praesentium placeat suscipit dolores, atque excepturi voluptas eligendi doloremque optio mollitia ullam recusandae nisi animi quia laborum, dignissimos repudiandae maxime nihil.
+          Saepe atque nesciunt magnam, ipsum unde voluptatum facere libero est, distinctio sed nihil quis. Quidem reiciendis itaque earum nihil? Blanditiis error ullam corrupti asperiores nisi libero esse amet, veniam laboriosam.</div>
+          </p>
+          <section></section>
         </section>
       </article>
 
       <!-- alatunniste-->
-      <footer>fLeXBoX laYoUt eXample</footer>
+      <footer><p>fLeXBoX laYoUt eXample</p></footer>
     </main>
   </body>
 </html>
